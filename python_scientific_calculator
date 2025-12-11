@@ -1,0 +1,61 @@
+#python scentific calculator
+import math
+
+while True:
+    print("\n🔢 Scientific Calculator 🔢")
+
+    print("\nChoose Operation:")
+    print("1 ➤ Square (x²)")
+    print("2 ➤ Square Root (√x)")
+    print("3 ➤ Power (xⁿ)")
+    print("4 ➤ Logarithm (log(x))")
+    print("5 ➤ Sine (sin)")
+    print("6 ➤ Cosine (cos)")
+    print("7 ➤ Tangent (tan)")
+    print("0 ➤ Exit")
+
+    choice = input("\nEnter your choice (0/1/2/3/4/5/6/7): ")
+
+    # Exit Option
+    if choice == "0":
+        print("\n📌 Thank you for using the calculator!")
+        break
+
+    # Square
+    elif choice == "1":
+        num = float(input("Enter number: "))
+        print("Result =", num * num)
+
+    # Square Root
+    elif choice == "2":
+        num = float(input("Enter number: "))
+        print("Result =", math.sqrt(num))
+
+    # Power
+    elif choice == "3":
+        base = float(input("Enter base number: "))
+        power = float(input("Enter power: "))
+        print("Result =", math.pow(base, power))
+
+    # Logarithm
+    elif choice == "4":
+        num = float(input("Enter number: "))
+        print("Result =", math.log(num))
+
+    # Sine
+    elif choice == "5":
+        num = float(input("Enter angle (in degrees): "))
+        print("Result =", math.sin(math.radians(num)))
+
+    # Cosine
+    elif choice == "6":
+        num = float(input("Enter angle (in degrees): "))
+        print("Result =", math.cos(math.radians(num)))
+
+    # Tangent
+    elif choice == "7":
+        num = float(input("Enter angle (in degrees): "))
+        print("Result =", math.tan(math.radians(num)))
+
+    else:
+        print("Invalid Choice ❌")
